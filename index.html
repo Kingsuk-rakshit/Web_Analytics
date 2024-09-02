@@ -59,7 +59,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <nav id="nav">
         <div class="navTop">
             <div class="navItem">
-                <h2>MDS Demo EcommerceStore</h2>
+                <h2>EcommerceStore</h2>
                 <!-- <img src="sneakers.png" alt=""> -->
             </div>
             <div class="navItem">
@@ -69,7 +69,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
             <div class="navItem">
-                <span class="limitedOffer">Limited Offer!</span>
+                <a href="privacy_policy.pdf" download="Policy_Document" class="btn btn-primary">Policy Document</a>
             </div>
         </div>
         <div class="navBottom">
@@ -230,6 +230,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 alt="" class="nsImg">
         </div>
     </div>
+<!-- Add Feedback Form here -->
+<section id="feedback" class="container my-5">
+    <h2>User Feedback</h2>
+    <form id="feedback-form">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="feedback" class="form-label">Feedback:</label>
+            <textarea id="feedback" name="feedback" class="form-control" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Feedback</button>
+    </form>
+</section>
+
+<!-- Footer section here -->
+
     <footer>
         <div class="footerLeft">
             <div class="footerMenu">
@@ -286,7 +308,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </footer>
     <script src="./app.js"></script>
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/WucrNEW6uDg?si=kYr8wJRTXVSuZzko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/MuVBkGfT_7g?si=pM08JjWxAwVeq7Vv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
 </body>
 
 </html>

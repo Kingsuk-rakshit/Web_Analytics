@@ -136,3 +136,8 @@ productButton.addEventListener("click", () => {
 close.addEventListener("click", () => {
   payment.style.display = "none";
 });
+// Handle Feedback Form Submission
+document.getElementById("feedback-form").addEventListener("submit", function(event){
+  event.preventDefault();
+  alert("Thank you for your feedback!");
+});

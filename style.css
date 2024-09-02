@@ -19,6 +19,18 @@ nav {
   color: white;
   padding: 20px 50px;
 }
+/* Styles for the Policy Document button */
+.navItem .btn-primary {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.navItem .btn-primary:hover {
+  background-color: #0056b3;
+}
 
 .navTop {
   display: flex;
@@ -413,6 +425,35 @@ label {
   cursor: pointer;
 }
 
+/* Feedback Section Styles */
+#feedback h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#feedback-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#feedback-form .form-control {
+  margin-bottom: 15px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+}
+
+#feedback-form button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
 footer {
   display: flex;
 }
@@ -562,6 +603,7 @@ footer {
   .nsItem:nth-child(2){
     padding: 50px;
   }
+  
 
   footer{
     flex-direction: column;
@@ -584,4 +626,15 @@ footer {
     width: 90%;
     padding: 20px;
   }
+}
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0; /* Adjust the margin as needed */
+}
+
+.video-container iframe {
+  width: 560px; /* Adjust the width as needed */
+  height: 315px; /* Adjust the height as needed */
 }

@@ -55,7 +55,43 @@ quantity: 3
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNX488C9"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=
+GTM-WNX488C9"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '
+GTM-WNX488C9');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title of the page</title>
+</head>
+<body>
+    <p>Welcome to my website!</p>
     
+    <script>
+      /**
+      *   The following event is sent when the page loads. You could
+      *   wrap the event in a JavaScript function so the event is
+      *   sent when the user performs some action.
+      */
+      gtag('event', 'screen_view', {
+        'app_name': 'myAppName',
+        'screen_name': 'Home'
+      });
+    </script> 
+</body>
+
+   
     <nav id="nav">
         <div class="navTop">
             <div class="navItem">

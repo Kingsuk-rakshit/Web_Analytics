@@ -552,3 +552,143 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </body>
 </html>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BSYTH5TVP8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        // Enable Debug Mode for GA
+        gtag('config', 'G-BSYTH5TVP8', { 'debug_mode': true });
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Events Example</title>
+</head>
+<body>
+    <h1>Google Analytics Event Tracking</h1>
+
+    <!-- 1. Select an Item from a List -->
+    <div>
+        <h2>Select an Item</h2>
+        <button id="select-item">Select Item</button>
+    </div>
+
+    <!-- 2. View Item Details -->
+    <div>
+        <h2>View Item Details</h2>
+        <button id="view-item">View Item</button>
+    </div>
+
+    <!-- 3. Add to Cart -->
+    <div>
+        <h2>Add Item to Cart</h2>
+        <button id="add-to-cart">Add to Cart</button>
+    </div>
+
+    <!-- 4. Remove from Cart -->
+    <div>
+        <h2>Remove Item from Cart</h2>
+        <button id="remove-from-cart">Remove from Cart</button>
+    </div>
+
+    <!-- 5. Initiate Checkout -->
+    <div>
+        <h2>Initiate Checkout</h2>
+        <button id="checkout">Checkout</button>
+    </div>
+
+    <!-- JavaScript for handling button events -->
+    <script>
+        // Select an item from a list
+        document.getElementById("select-item").addEventListener("click", function () {
+            gtag("event", "select_item", {
+                items: [
+                    {
+                        item_id: "SKU_001",
+                        item_name: "Red T-shirt",
+                        item_category: "Clothing",
+                        item_variant: "Medium",
+                        price: 19.99
+                    }
+                ]
+            });
+            console.log('Select Item event triggered');
+        });
+
+        // View item details
+        document.getElementById("view-item").addEventListener("click", function () {
+            gtag("event", "view_item", {
+                items: [
+                    {
+                        item_id: "SKU_002",
+                        item_name: "Blue Jeans",
+                        item_category: "Clothing",
+                        item_variant: "Large",
+                        price: 49.99
+                    }
+                ]
+            });
+            console.log('View Item event triggered');
+        });
+
+        // Add item to cart
+        document.getElementById("add-to-cart").addEventListener("click", function () {
+            gtag("event", "add_to_cart", {
+                items: [
+                    {
+                        item_id: "SKU_003",
+                        item_name: "Green Hoodie",
+                        item_category: "Clothing",
+                        item_variant: "Small",
+                        price: 39.99
+                    }
+                ]
+            });
+            console.log('Add to Cart event triggered');
+        });
+
+        // Remove item from cart
+        document.getElementById("remove-from-cart").addEventListener("click", function () {
+            gtag("event", "remove_from_cart", {
+                items: [
+                    {
+                        item_id: "SKU_003",
+                        item_name: "Green Hoodie",
+                        item_category: "Clothing",
+                        item_variant: "Small",
+                        price: 39.99
+                    }
+                ]
+            });
+            console.log('Remove from Cart event triggered');
+        });
+
+        // Initiate checkout process
+        document.getElementById("checkout").addEventListener("click", function () {
+            gtag("event", "begin_checkout", {
+                items: [
+                    {
+                        item_id: "SKU_001",
+                        item_name: "Red T-shirt",
+                        item_category: "Clothing",
+                        item_variant: "Medium",
+                        price: 19.99,
+                        quantity: 1
+                    }
+                ],
+                value: 19.99,
+                currency: "USD",
+                coupon: "SUMMER2024"
+            });
+            console.log('Checkout event triggered');
+        });
+    </script>
+</body>
+</html>
+
+

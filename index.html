@@ -513,5 +513,128 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </body>
 </html>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BSYTH5TVP8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BSYTH5TVP8',{ 'debug_mode': true });
+    </script>
+</head>
+<body>
+    <!-- 1. Select an Item from a List -->
+    <div>Click Select Item Button for custom event</div>
+    <button id="select-item">Select Item</button>
+    <script>
+    document.getElementById("select-item").addEventListener("click", function () {
+        gtag("event", "select_item", {
+                currency: "USD",
+                value: 19.99,
+                items: [
+                {
+                  item_id: "SKU_001",
+                  item_name: "Red T-shirt",
+                  item_category: "Clothing",
+                  item_variant: "Medium",
+                  price: 19.99,
+                  quantity: 1
+                }]
+        });
+    });
+    </script>
+
+    <!-- 2. View Item Details -->
+    <div>Click View Item Button for custom event</div>
+    <button id="view-item">View Item</button>
+    <script>
+    document.getElementById("view-item").addEventListener("click", function () {
+        gtag("event", "view_item", {
+                currency: "USD",
+                value: 49.99,
+                items: [
+                {
+                  item_id: "SKU_002",
+                  item_name: "Blue Jeans",
+                  item_category: "Clothing",
+                  item_variant: "Large",
+                  price: 49.99,
+                  quantity: 1
+                }]
+        });
+    });
+    </script>
+
+    <!-- 3. Add to Cart -->
+    <div>Click Add to Cart Button for custom event</div>
+    <button id="add-to-cart">Add to Cart</button>
+    <script>
+    document.getElementById("add-to-cart").addEventListener("click", function () {
+        gtag("event", "add_to_cart", {
+                currency: "USD",
+                value: 39.99,
+                event_label: "Custom Add to Cart", // Differentiate the event
+                items: [
+                {
+                  item_id: "SKU_003",
+                  item_name: "Green Hoodie",
+                  item_category: "Clothing",
+                  item_variant: "Small",
+                  price: 39.99,
+                  quantity: 1
+                }]
+        });
+    });
+    </script>
+
+    <!-- 4. Remove from Cart -->
+    <div>Click Remove from Cart Button for custom event</div>
+    <button id="remove-from-cart">Remove from Cart</button>
+    <script>
+    document.getElementById("remove-from-cart").addEventListener("click", function () {
+        gtag("event", "remove_from_cart", {
+                currency: "USD",
+                value: 39.99,
+                items: [
+                {
+                  item_id: "SKU_003",
+                  item_name: "Green Hoodie",
+                  item_category: "Clothing",
+                  item_variant: "Small",
+                  price: 39.99,
+                  quantity: 1
+                }]
+        });
+    });
+    </script>
+
+    <!-- 5. Initiate Checkout -->
+    <div>Click Checkout Button for custom event</div>
+    <button id="checkout">Checkout</button>
+    <script>
+    document.getElementById("checkout").addEventListener("click", function () {
+        gtag("event", "begin_checkout", {
+                currency: "USD",
+                value: 19.99,
+                items: [
+                {
+                  item_id: "SKU_001",
+                  item_name: "Red T-shirt",
+                  item_category: "Clothing",
+                  item_variant: "Medium",
+                  price: 19.99,
+                  quantity: 1
+                }]
+        });
+    });
+    </script>
+
+</body>
+</html>
+
 
 

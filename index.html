@@ -512,3 +512,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </script>
 </body>
 </html>
+
+<!--
+  Note: Replace "TAG_ID" with your tag ID.
+  Learn more: https://support.google.com/tagmanager/answer/12326985
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BSYTH5TVP8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-BSYTH5TVP8', { 'debug_mode': true });
+    </script>
+</head>
+<body>
+    <div>Click to select an item from the list</div>
+    <button id="selectItem">Select Item</button>
+    <script>
+    document.getElementById("selectItem").addEventListener("click", function () {
+        gtag("event", "select_item", {
+            item_list_name: "Summer Sale",
+            items: [
+                {
+                    item_id: "SKU_001",
+                    item_name: "Red T-shirt",
+                    item_category: "Clothing",
+                    item_variant: "Medium",
+                    price: 19.99
+                }
+            ]
+        });
+    });
+    </script>
+</body>
+</html>
+
